@@ -17,17 +17,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         if (savedInstanceState == null) {
-            if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
-                getFragmentManager().beginTransaction()
-                        .add(R.id.fragment_place, new FragmentOne())
-                        .addToBackStack(null)
-                        .commit();
-            } else {
-                getFragmentManager().beginTransaction()
-                        .add(R.id.fragmentOne, new FragmentOne())
-                        .add(R.id.fragmentTwo, new FragmentTwo())
-                        .commit();
-            }
+
+            getFragmentManager().beginTransaction()
+                    .add(R.id.fragment_place, new FragmentOne())
+                    .commit();
+        }
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+
+            getFragmentManager().beginTransaction()
+                    .add(R.id.fragmentOne, new FragmentOne())
+                    .add(R.id.fragmentTwo, new FragmentTwo())
+                    .commit();
         }
 
         setContentView(R.layout.activity_main);

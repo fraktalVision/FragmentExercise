@@ -4,14 +4,14 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <fragment
+    <FrameLayout
         android:id="@+id/fragmentOne"
         android:layout_height="match_parent"
         android:layout_width="0dp"
         android:layout_gravity="fill_horizontal"
         android:layout_weight="1" />
 
-    <fragment
+    <FrameLayout
         android:id="@+id/fragmentTwo"
         android:layout_height="match_parent"
         android:layout_width="0dp"
